@@ -1,0 +1,9 @@
+<h2 class="page-header"><%= author.name %> </h2>
+<div class="btn-row">
+    <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
+    <%- include('../partials/delete.ejs', {url: `/authors/${author.id}`}) %> 
+</div>
+<% if(books.length > 0) {%> 
+<h3>Books By Author</h3>
+<%- include('../partials/bookCoverImage', {books : books, large : true}) %> 
+<% } %> 

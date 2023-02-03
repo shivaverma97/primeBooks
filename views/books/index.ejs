@@ -1,0 +1,26 @@
+<h2 class="page-header">Search Books</h2>
+<form action="/books" method="GET">
+    <div>
+        <div class="form-row">
+            <div class="form-item">
+                <label>Title</label>
+                <input type="text" name="title" value="<%= searchOptions.title %> "><br> 
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-item">
+                <label>Published After</label>
+                <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %> "><br>
+            </div>
+            <div class="form-item">
+                <label>Published Before</label>
+                <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %> "><br>
+            </div>
+        </div>
+    </div>
+    <div class="form-row form-row-end btn-row">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+<br>
+<%- include('../partials/bookCoverImage', {books : books}) %> 
